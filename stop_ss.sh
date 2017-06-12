@@ -2,7 +2,8 @@
 
 lan_ipaddr=$(nvram get lan_ipaddr)
 
-rm -f /tmp/dnsmasq.d/black.conf
+# clear dnsmasq
+echo "" > /tmp/resolv.dnsmasq
 
 /sbin/service restart_dnsmasq
 
